@@ -1,7 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'super-rentals/tests/helpers';
 import { render } from '@ember/test-helpers';
-import Rental from 'super-rentals/components/rental';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | rental', function (hooks) {
@@ -16,7 +15,6 @@ module('Integration | Component | rental', function (hooks) {
     assert.dom('article .detail.type').includesText('Standalone');
     assert.dom('article .detail.location').includesText('San Francisco');
     assert.dom('article .detail.bedrooms').includesText('15');
-            assert.dom('article .image').exists();
-
+    assert.dom('article .image').exists();
   });
 });
