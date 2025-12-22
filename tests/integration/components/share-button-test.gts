@@ -20,8 +20,8 @@ module('Integration | Component | share-button', function (hooks) {
     this.owner.register('service:router', MockRouterService);
 
     this.tweetParam = (param) => {
-      let link = find('a');
-      let url = new URL(link.href);
+      const link = find('a');
+      const url = new URL(link.href);
       return url.searchParams.get(param);
     };
   });

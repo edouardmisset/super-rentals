@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 
 export interface ShareButtonSignature {
   // The arguments accepted by the component
@@ -22,7 +22,7 @@ export default class ShareButton extends Component<ShareButtonSignature> {
   }
 
   get shareURL() {
-    let url = new URL(TWEET_INTENT);
+    const url = new URL(TWEET_INTENT);
 
     url.searchParams.set('url', this.currentURL);
 
